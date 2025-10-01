@@ -64,66 +64,56 @@ export default function AdditionalInfo() {
             </div>
           </div>
 
-          {/* Setores de Atuação */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">
-                Setores de Atuação
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-red rounded-full"></div>
-                  <span className="font-semibold">Residencial</span>
+          {/* Clientes */}
+          <div className="bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-6 text-center">
+              Clientes
+            </h3>
+            
+            <div className="mb-6">
+              <h4 className="text-xl font-semibold mb-4 text-center">Público-Alvo:</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
+                  <div className="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold">Construtoras e empreiteiras</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-red rounded-full"></div>
-                  <span className="font-semibold">Comercial</span>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
+                  <div className="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold">Residências e condomínios</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-red rounded-full"></div>
-                  <span className="font-semibold">Industrial</span>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
+                  <div className="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold">Empresas industriais e comerciais</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-red rounded-full"></div>
-                  <span className="font-semibold">Público</span>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
+                  <div className="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold">Órgãos públicos</span>
                 </div>
               </div>
             </div>
-
-            <div className="bg-light-gray rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-primary-blue mb-6">
-                Parcerias Estratégicas
-              </h3>
-              <p className="text-medium-gray mb-4">
-                Mantemos parcerias sólidas com fornecedores de máquinas e equipamentos 
-                industriais de alta qualidade, garantindo:
+            
+            <div className="mt-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <p className="text-lg leading-relaxed">
+                <strong>Foco em soluções personalizadas para cada necessidade,</strong><br />
+                com atendimento ágil e eficiente.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-dark-gray">Equipamentos de última geração</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-dark-gray">Garantia estendida</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-dark-gray">Suporte técnico especializado</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-dark-gray">Preços competitivos</span>
-                </div>
-              </div>
             </div>
           </div>
 

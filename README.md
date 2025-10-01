@@ -1,6 +1,6 @@
 # 🌡️ Thermo Service Climatização LTDA - Site Institucional
 
-Site institucional moderno e responsivo para a Thermo Service Climatização LTDA, empresa especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.
+Site institucional para a Thermo Service Climatização LTDA, empresa especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.
 
 ## 📋 Sobre o Projeto
 

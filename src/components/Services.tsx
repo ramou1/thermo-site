@@ -4,17 +4,17 @@ export default function Services() {
   const services = [
     {
       title: "Climatização",
-      description: "Soluções completas em climatização para ambientes residenciais, comerciais e industriais. Instalação, manutenção e reparo de sistemas de ar condicionado.",
+      description: "Manutenção de sistemas centrais de ar condicionado, ventilação, refrigeração.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+          <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
         </svg>
       ),
       features: ["Ar Condicionado", "Sistemas Centrais", "Manutenção Preventiva", "Reparos Emergenciais"]
     },
     {
       title: "Instalações Elétricas",
-      description: "Instalações elétricas seguras e eficientes, seguindo todas as normas técnicas. Projetos elétricos e manutenção de sistemas elétricos.",
+      description: "Alteração, manutenção e reparos em painel de comandos elétricos.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
@@ -24,17 +24,17 @@ export default function Services() {
     },
     {
       title: "Comércio Atacadista",
-      description: "Distribuição de equipamentos e materiais para climatização e instalações elétricas. Parcerias com fornecedores de alta qualidade.",
+      description: "Máquinas e equipamentos industriais, peças e componentes (ex.: válvulas, mangueiras, rolamentos).",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+          <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
         </svg>
       ),
       features: ["Equipamentos Industriais", "Materiais Elétricos", "Peças e Componentes", "Atendimento Especializado"]
     },
     {
       title: "Tecnologia da Informação",
-      description: "Soluções em TI para empresas, incluindo infraestrutura de rede, sistemas de monitoramento e automação de processos.",
+      description: "Desenvolvimento de softwares sob encomenda, consultoria, suporte técnico e manutenção de sistemas.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -73,20 +73,10 @@ export default function Services() {
                 <h3 className="text-xl font-bold text-primary-blue mb-3">
                   {service.title}
                 </h3>
-                <p className="text-medium-gray text-sm leading-relaxed mb-4">
+                <p className="text-medium-gray text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
-
-              <div className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-primary-red rounded-full"></div>
-                    <span className="text-sm text-dark-gray">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
             </div>
           ))}
         </div>

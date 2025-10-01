@@ -1,30 +1,30 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-blue to-secondary-blue text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white rounded-full"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 border-2 border-white rounded-full"></div>
-        <div className="absolute bottom-32 left-40 w-40 h-40 border-2 border-white rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 border-2 border-white rounded-full"></div>
+    <section id="hero" className="h-[70vh] md:h-[85vh] flex items-center justify-center text-white relative overflow-hidden">
+      {/* Background Banner */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/site/banner-hero.png"
+          alt="Banner Hero"
+          fill
+          className="object-cover object-[center_top] md:object-top"
+          priority
+        />
+        {/* Overlay escuro para melhorar legibilidade do texto */}
+        <div className="absolute inset-0 bg-primary-blue bg-opacity-40"></div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Logo Principal */}
-          <div className="mb-8">
-            <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-              <span className="text-primary-red font-bold text-4xl">TS</span>
-            </div>
-            <div className="w-24 h-1 bg-primary-red mx-auto rounded-full animate-fade-in-up"></div>
-          </div>
 
           {/* Descrição Principal */}
           <div className="mb-12 animate-fade-in-up">
-            <p className="text-base md:text-lg text-blue-200 mb-8 leading-relaxed">
-              Especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.
+            <p className="text-base md:text-lg text-white mb-8 leading-relaxed font-medium">
+              Empresa especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.
               <br />
               Fundada em <span className="font-semibold">10 de fevereiro de 2012</span>, com sede em <span className="font-semibold">São José, SC</span>.
             </p>
