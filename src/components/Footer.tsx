@@ -1,3 +1,4 @@
+import { Instagram, Facebook, Linkedin } from 'lucide-react'
 import Image from 'next/image';
 
 export default function Footer() {
@@ -20,15 +21,14 @@ export default function Footer() {
               Fundada em 2012, com sede em São José, SC.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-primary-red rounded-lg flex items-center justify-center hover:bg-primary-blue transition-colors duration-300">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
+              <a href="https://www.instagram.com/thermo.servicee" className="w-10 h-10 bg-primary-red rounded-lg flex items-center justify-center hover:bg-primary-blue transition-colors duration-300">
+                <Instagram className="w-6 h-6" />
               </a>
               <a href="#" className="w-10 h-10 bg-primary-red rounded-lg flex items-center justify-center hover:bg-primary-blue transition-colors duration-300">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-primary-red rounded-lg flex items-center justify-center hover:bg-primary-blue transition-colors duration-300">
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function Footer() {
                 <svg className="w-5 h-5 text-primary-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <a href="tel:+5548991238900" className="text-sm hover:text-primary-red transition-colors duration-300">
-                  (48) 99123-8900
+                <a href="tel:+554830898333" className="text-sm hover:text-primary-red transition-colors duration-300">
+                  (48) 3089-8333
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400">
-          <p className="text-sm">&copy; 2024 Thermo Service Climatização LTDA. Todos os direitos reservados.</p>
+          <p className="text-sm">&copy; 2025 Thermo Service Climatização LTDA. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
