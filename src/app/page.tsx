@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Automatization from '@/components/Automatization';
 import Services from '@/components/Services';
 import Differential from '@/components/Differential';
 import AdditionalInfo from '@/components/AdditionalInfo';
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Automatization />
       <Services />
       <Differential />
       <AdditionalInfo />
