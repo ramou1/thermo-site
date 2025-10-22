@@ -1,26 +1,49 @@
 import Image from 'next/image';
 
 export default function Differential() {
-  const differentials = [
+  // const differentials = [
+  //   {
+  //     title: "Soluções Integradas",
+  //     description: "Oferecemos soluções completas que integram climatização, elétrica, hidráulica e TI em um único projeto, garantindo eficiência e economia.",
+  //     image: "/site/images/diferencial01.png"
+  //   },
+  //   {
+  //     title: "Experiência",
+  //     description: "Mais de 12 anos de experiência no mercado, com equipe técnica especializada e conhecimento profundo das melhores práticas da indústria.",
+  //     image: "/site/images/diferencial02.png"
+  //   },
+  //   {
+  //     title: "Compromisso com Qualidade",
+  //     description: "Utilizamos apenas equipamentos e materiais de alta qualidade, seguindo rigorosos padrões de instalação e manutenção para garantir a excelência.",
+  //     image: "/site/images/diferencial03.png"
+  //   },
+  //   {
+  //     title: "Sustentabilidade",
+  //     description: "Comprometidos com práticas sustentáveis, oferecemos soluções que reduzem o consumo energético e minimizam o impacto ambiental.",
+  //     image: "/site/images/diferencial04.png"
+  //   }
+  // ];
+
+    const differentials = [
     {
-      title: "Soluções Integradas",
-      description: "Oferecemos soluções completas que integram climatização, elétrica, hidráulica e TI em um único projeto, garantindo eficiência e economia.",
+      title: "Experiência em climatização, hidráulica e elétrica",
       image: "/site/images/diferencial01.png"
     },
     {
-      title: "Experiência",
-      description: "Mais de 12 anos de experiência no mercado, com equipe técnica especializada e conhecimento profundo das melhores práticas da indústria.",
+      title: "Desenvolvimento de lógica personalizada",
       image: "/site/images/diferencial02.png"
     },
     {
-      title: "Compromisso com Qualidade",
-      description: "Utilizamos apenas equipamentos e materiais de alta qualidade, seguindo rigorosos padrões de instalação e manutenção para garantir a excelência.",
+      title: "Integração com diversos fabricantes e protocolos",
       image: "/site/images/diferencial03.png"
     },
     {
-      title: "Sustentabilidade",
-      description: "Comprometidos com práticas sustentáveis, oferecemos soluções que reduzem o consumo energético e minimizam o impacto ambiental.",
+      title: "Foco em eficiência energética",
       image: "/site/images/diferencial04.png"
+    },
+    {
+      title: "Suporte técnico especializado",
+      image: "/site/images/diferencial01.png"
     }
   ];
 
@@ -37,7 +60,8 @@ export default function Differential() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {/* antigo: md:grid-cols-4 */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {differentials.map((differential, index) => (
             <div 
               key={index}
@@ -53,14 +77,18 @@ export default function Differential() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-primary-blue mb-3">
+              <div className="p-4">
+                <h3 className="text-base text-center font-semibold text-primary-blue">
+                  {differential.title}
+                </h3>
+
+                {/* <h3 className="text-lg font-bold text-primary-blue mb-3">
                   {differential.title}
                 </h3>
                 
                 <p className="text-medium-gray leading-relaxed text-sm">
                   {differential.description}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}
