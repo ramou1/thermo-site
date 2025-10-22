@@ -10,9 +10,7 @@ export default function About() {
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-medium-gray max-w-3xl mx-auto leading-relaxed">
-            A Thermo Service Climatização LTDA é uma empresa especializada em soluções integradas 
-            de climatização, elétrica, hidráulica e tecnologia da informação, comprometida com a 
-            excelência e inovação desde 2012.
+          A Thermo Service é especializada em automação predial, integrando sistemas essenciais para edifícios comerciais, industriais e residenciais com alta performance e tecnologia.
           </p>
         </div>
 

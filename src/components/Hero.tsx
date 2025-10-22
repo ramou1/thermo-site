@@ -15,7 +15,7 @@ export default function Hero() {
           priority
         />
         {/* Overlay escuro para melhorar legibilidade do texto */}
-        <div className="absolute inset-0 bg-primary-blue bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-primary-blue/60"></div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -23,10 +23,9 @@ export default function Hero() {
 
           {/* Descrição Principal */}
           <div className="mb-12 animate-fade-in-up">
-            <p className="text-base md:text-lg text-white mb-8 leading-relaxed font-medium">
-              Empresa especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.
-              <br />
-              Fundada em <span className="font-semibold">10 de fevereiro de 2012</span>, com sede em <span className="font-semibold">São José, SC</span>.
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed font-medium">
+            Automação Predial Inteligente para<br />
+            <strong>Eficiência, Conforto e Confiabilidade.</strong>
             </p>
             
           </div>
