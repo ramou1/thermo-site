@@ -52,11 +52,18 @@ export default function Footer() {
                 <svg className="w-5 h-5 mt-0.5 text-primary-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <div>
-                  <p className="text-sm">Rua São Ludgero, 1006, Sala 02</p>
-                  <p className="text-sm">Barreiros, São José, SC</p>
-                  <p className="text-sm">88117-270</p>
-                </div>
+                <a 
+                  href="https://maps.app.goo.gl/iZcnQicGNdihvYTE6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-red transition-colors duration-300"
+                >
+                  <div>
+                    <p className="text-sm">Rua São Ludgero, 1006, Sala 02</p>
+                    <p className="text-sm">Barreiros, São José, SC</p>
+                    <p className="text-sm">88117-270</p>
+                  </div>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-primary-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

@@ -69,6 +69,16 @@ export default function Header() {
               Quem Somos
             </button>
             <button 
+              onClick={() => scrollToSection('automatization')}
+              className={`transition-colors duration-300 font-medium ${
+                isScrolled 
+                  ? 'text-primary-blue hover:text-primary-red' 
+                  : 'text-white hover:text-primary-red'
+              }`}
+            >
+              Automatizações
+            </button>
+            <button 
               onClick={() => scrollToSection('services')}
               className={`transition-colors duration-300 font-medium ${
                 isScrolled 
@@ -134,6 +144,12 @@ export default function Header() {
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
                 Quem Somos
+              </button>
+              <button 
+                onClick={() => scrollToSection('automatization')}
+                className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
+              >
+                Automatizações
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
