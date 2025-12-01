@@ -57,10 +57,10 @@ export default function Contact() {
                     <h4 className="font-semibold text-lg">Telefone</h4>
                     <p className="text-blue-100 text-base">
                       <a
-                        href="tel:+554830898333"
+                        href="tel:+554830357355"
                         className="hover:text-primary-red transition-colors duration-300"
                       >
-                        (48) 3089-8333
+                        (48) 3035-7355
                       </a>
                     </p>
                   </div>

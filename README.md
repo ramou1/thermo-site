@@ -161,7 +161,7 @@ yarn start
 - **CNPJ**: 15.041.926/0001-00
 - **Fundação**: 10 de fevereiro de 2012
 - **Endereço**: Rua São Ludgero, 1006, Sala 02, Barreiros, São José, SC, 88117-270
-- **Telefone**: (48) 3089-8333
+- **Telefone**: (48) 3035-7355
 - **E-mail**: thermoservice@thermoservice.srv.br
 
 ## 🤝 Contribuição
