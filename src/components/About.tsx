@@ -20,7 +20,7 @@ export default function About() {
             <div className="w-16 h-16 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/site/images/missao.png"
+                  src="/images/missao.png"
                   alt="Missão"
                   fill
                   className="object-cover"
@@ -38,7 +38,7 @@ export default function About() {
             <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/site/images/visao.png"
+                  src="/images/visao.png"
                   alt="Visão"
                   fill
                   className="object-cover"
@@ -56,7 +56,7 @@ export default function About() {
             <div className="w-16 h-16 bg-primary-red rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/site/images/valores.png"
+                  src="/images/valores.png"
                   alt="Valores"
                   fill
                   className="object-cover"

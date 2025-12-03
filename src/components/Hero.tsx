@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Banner */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/site/banner-hero.png"
+          src="/banner-hero.png"
           alt="Banner Hero"
           fill
           className="object-cover object-[center_top] md:object-top"

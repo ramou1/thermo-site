@@ -5,45 +5,45 @@ export default function Differential() {
   //   {
   //     title: "Soluções Integradas",
   //     description: "Oferecemos soluções completas que integram climatização, elétrica, hidráulica e TI em um único projeto, garantindo eficiência e economia.",
-  //     image: "/site/images/diferencial01.png"
+  //     image: "/images/diferencial01.png"
   //   },
   //   {
   //     title: "Experiência",
   //     description: "Mais de 12 anos de experiência no mercado, com equipe técnica especializada e conhecimento profundo das melhores práticas da indústria.",
-  //     image: "/site/images/diferencial02.png"
+  //     image: "/images/diferencial02.png"
   //   },
   //   {
   //     title: "Compromisso com Qualidade",
   //     description: "Utilizamos apenas equipamentos e materiais de alta qualidade, seguindo rigorosos padrões de instalação e manutenção para garantir a excelência.",
-  //     image: "/site/images/diferencial03.png"
+  //     image: "/images/diferencial03.png"
   //   },
   //   {
   //     title: "Sustentabilidade",
   //     description: "Comprometidos com práticas sustentáveis, oferecemos soluções que reduzem o consumo energético e minimizam o impacto ambiental.",
-  //     image: "/site/images/diferencial04.png"
+  //     image: "/images/diferencial04.png"
   //   }
   // ];
 
     const differentials = [
     {
       title: "Experiência em climatização, hidráulica e elétrica",
-      image: "/site/images/diferencial01.png"
+      image: "/images/diferencial01.png"
     },
     {
       title: "Desenvolvimento de lógica personalizada",
-      image: "/site/images/diferencial02.png"
+      image: "/images/diferencial02.png"
     },
     {
       title: "Integração com diversos fabricantes e protocolos",
-      image: "/site/images/diferencial03.png"
+      image: "/images/diferencial03.png"
     },
     {
       title: "Foco em eficiência energética",
-      image: "/site/images/diferencial04.png"
+      image: "/images/diferencial04.png"
     },
     {
       title: "Suporte técnico especializado",
-      image: "/site/images/diferencial01.png"
+      image: "/images/diferencial01.png"
     }
   ];
 

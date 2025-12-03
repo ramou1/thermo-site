@@ -122,21 +122,80 @@ yarn dev
 
 Acesse [http://localhost:3000](http://localhost:3000) para visualizar o site.
 
-### Build para Produção
+### Build para Produção (Export Estático)
 ```bash
 npm run build
-npm start
 # ou
 yarn build
-yarn start
 ```
+
+O build irá gerar uma pasta `out/` com todos os arquivos estáticos do site prontos para hospedagem.
+
+**⚠️ IMPORTANTE**: Este projeto está configurado para export estático (`output: 'export'`), o que significa que gera arquivos HTML estáticos que podem ser hospedados em qualquer servidor web estático.
 
 ## 📝 Scripts Disponíveis
 
 - `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria build de produção
-- `npm run start` - Inicia o servidor de produção
+- `npm run build` - Cria build de produção (gera pasta `out/`)
+- `npm run start` - Inicia o servidor de produção (não necessário para export estático)
 - `npm run lint` - Executa o linter ESLint
+
+## 🚀 Deploy e Hospedagem
+
+### Como Compilar o Projeto
+
+1. **Instale as dependências** (se ainda não fez):
+```bash
+npm install
+```
+
+2. **Compile o projeto**:
+```bash
+npm run build
+```
+
+3. **A pasta `out/` será criada** com todos os arquivos estáticos do site.
+
+### Como Fazer Upload para Hospedagem
+
+#### Opção 1: Hospedagem Compartilhada (cPanel, FTP, etc.)
+
+1. **Acesse a pasta `out/`** após o build
+2. **Selecione todos os arquivos e pastas** dentro de `out/`
+3. **Faça upload via FTP/cPanel** para a **raiz do seu domínio** (pasta `public_html`, `www`, ou similar)
+4. **Certifique-se de que o arquivo `index.html` está na raiz**
+
+#### Opção 2: Hospedagem em Servidor (SSH)
+
+1. **Acesse o servidor via SSH**
+2. **Navegue até a pasta do site** (geralmente `/var/www/html` ou similar)
+3. **Faça backup dos arquivos antigos** (se houver)
+4. **Copie o conteúdo da pasta `out/`** para a pasta do servidor:
+```bash
+# Exemplo (ajuste os caminhos conforme necessário)
+scp -r out/* usuario@servidor:/var/www/html/
+```
+
+#### Opção 3: Hospedagem Estática (Netlify, Vercel, GitHub Pages)
+
+- **Netlify**: Arraste a pasta `out/` para o Netlify Drop ou configure o build command como `npm run build` e publish directory como `out`
+- **Vercel**: Configure o output directory como `out` nas configurações
+- **GitHub Pages**: Faça upload da pasta `out/` para o branch `gh-pages` ou configure GitHub Actions
+
+### Estrutura Após o Build
+
+Após executar `npm run build`, a estrutura será:
+```
+out/
+├── _next/          # Assets do Next.js (JS, CSS, etc.)
+├── images/         # Imagens do site
+├── index.html      # Página principal
+├── 404.html        # Página de erro
+├── favicon.ico     # Ícone do site
+└── ...             # Outros arquivos estáticos
+```
+
+**⚠️ Lembre-se**: Todos os arquivos da pasta `out/` devem estar na **raiz do seu domínio** (não em uma subpasta como `/site`).
 
 ## 🎯 Próximos Passos
 

@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-2">
               <Image
-                src="/site/logo-thermo.jpeg"
+                src="/logo-thermo.jpeg"
                 alt="Thermo Service Logo"
                 width={160}
                 height={80}

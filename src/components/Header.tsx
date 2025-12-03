@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ export default function Header() {
           <div className="flex items-center">
             <div className="w-32 h-20 relative">
               <Image
-                src="/site/logo-thermo.jpeg"
+                src="/logo-thermo.jpeg"
                 alt="Thermo Service Logo"
                 fill
                 className="object-contain rounded-lg"
@@ -47,63 +48,66 @@ export default function Header() {
           </div>
 
           {/* Navigation Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-primary-blue hover:text-primary-red' 
-                  : 'text-white hover:text-primary-red'
-              }`}
-            >
-              Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-primary-blue hover:text-primary-red' 
-                  : 'text-white hover:text-primary-red'
-              }`}
-            >
-              Quem Somos
-            </button>
-            <button 
-              onClick={() => scrollToSection('automatization')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-primary-blue hover:text-primary-red' 
-                  : 'text-white hover:text-primary-red'
-              }`}
-            >
-              Automatizações
-            </button>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-primary-blue hover:text-primary-red' 
-                  : 'text-white hover:text-primary-red'
-              }`}
-            >
-              Serviços
-            </button>
-            <button 
-              onClick={() => scrollToSection('differential')}
-              className={`transition-colors duration-300 font-medium ${
-                isScrolled 
-                  ? 'text-primary-blue hover:text-primary-red' 
-                  : 'text-white hover:text-primary-red'
-              }`}
-            >
-              Diferencial
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary-red text-white px-6 py-2 rounded-lg hover:bg-secondary-blue transition-colors duration-300 font-medium"
-            >
-              Contato
-            </button>
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
+              <button 
+                onClick={() => scrollToSection('hero')}
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? 'text-primary-blue hover:text-primary-red' 
+                    : 'text-white hover:text-primary-red'
+                }`}
+              >
+                Início
+              </button>
+              <button 
+                onClick={() => scrollToSection('automatization')}
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? 'text-primary-blue hover:text-primary-red' 
+                    : 'text-white hover:text-primary-red'
+                }`}
+              >
+                Automatizações
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? 'text-primary-blue hover:text-primary-red' 
+                    : 'text-white hover:text-primary-red'
+                }`}
+              >
+                Quem Somos
+              </button>
+              <button 
+                onClick={() => scrollToSection('services')}
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? 'text-primary-blue hover:text-primary-red' 
+                    : 'text-white hover:text-primary-red'
+                }`}
+              >
+                Serviços
+              </button>
+              <button 
+                onClick={() => scrollToSection('differential')}
+                className={`transition-colors duration-300 font-medium ${
+                  isScrolled 
+                    ? 'text-primary-blue hover:text-primary-red' 
+                    : 'text-white hover:text-primary-red'
+                }`}
+              >
+                Diferencial
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-primary-red text-white px-6 py-2 rounded-lg hover:bg-secondary-blue transition-colors duration-300 font-medium"
+              >
+                Contato
+              </button>
+            </div>
+            <LanguageSelector />
           </div>
 
           {/* Mobile Menu Button */}
@@ -140,16 +144,16 @@ export default function Header() {
                 Início
               </button>
               <button 
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
-              >
-                Quem Somos
-              </button>
-              <button 
                 onClick={() => scrollToSection('automatization')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
                 Automatizações
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
+              >
+                Quem Somos
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
@@ -169,6 +173,7 @@ export default function Header() {
               >
                 Contato
               </button>
+              <LanguageSelector isMobile={true} />
             </div>
           </div>
         )}
