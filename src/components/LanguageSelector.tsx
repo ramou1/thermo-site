@@ -3,6 +3,7 @@
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { useState } from 'react';
 import { Globe } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const languages: { code: Language; name: string; codeLabel: string }[] = [
   { code: 'pt', name: 'Português', codeLabel: 'BR' },
@@ -13,6 +14,7 @@ const languages: { code: Language; name: string; codeLabel: string }[] = [
 export default function LanguageSelector({ isMobile = false }: { isMobile?: boolean }) {
   const { language, setLanguage, isLanguageEnabled } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslation();
 
   const handleLanguageClick = (lang: Language) => {
     if (isLanguageEnabled(lang)) {
@@ -24,7 +26,7 @@ export default function LanguageSelector({ isMobile = false }: { isMobile?: bool
   if (isMobile) {
     return (
       <div className="border-t border-gray-200 pt-3 mt-3">
-        <div className="text-xs font-semibold text-gray-500 uppercase mb-2 px-2">Idioma</div>
+        <div className="text-xs font-semibold text-gray-500 uppercase mb-2 px-2">{t.language.language}</div>
         <div className="space-y-1">
           {languages.map((lang) => {
             const isEnabled = isLanguageEnabled(lang.code);
@@ -49,7 +51,7 @@ export default function LanguageSelector({ isMobile = false }: { isMobile?: bool
                   <span className="ml-auto text-sm">✓</span>
                 )}
                 {!isEnabled && (
-                  <span className="ml-auto text-xs">Em breve</span>
+                  <span className="ml-auto text-xs">{t.language.comingSoon}</span>
                 )}
               </button>
             );
@@ -63,24 +65,17 @@ export default function LanguageSelector({ isMobile = false }: { isMobile?: bool
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-300 ${
+        className={`flex items-center gap-1 px-2 py-1.5 rounded-md transition-colors duration-300 ${
           isOpen
             ? 'bg-primary-red text-white'
-            : 'bg-white bg-opacity-10 hover:bg-opacity-20 text-white'
+            : 'bg-white bg-opacity-5 hover:bg-opacity-15 text-white'
         }`}
+        title="Selecionar idioma"
       >
-        <Globe className="w-4 h-4" />
-        <span className="text-sm font-semibold">
+        <Globe className="w-3.5 h-3.5" />
+        <span className="text-xs font-medium">
           {languages.find(l => l.code === language)?.codeLabel || 'BR'}
         </span>
-        <svg
-          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
       </button>
 
       {isOpen && (
@@ -89,7 +84,7 @@ export default function LanguageSelector({ isMobile = false }: { isMobile?: bool
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 overflow-hidden border border-gray-200">
+          <div className="absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-lg z-50 overflow-hidden border border-gray-200">
             {languages.map((lang) => {
               const isEnabled = isLanguageEnabled(lang.code);
               const isActive = language === lang.code;
@@ -112,9 +107,9 @@ export default function LanguageSelector({ isMobile = false }: { isMobile?: bool
                   {isActive && (
                     <span className="text-sm">✓</span>
                   )}
-                  {!isEnabled && (
-                    <span className="text-xs">Em breve</span>
-                  )}
+                {!isEnabled && (
+                  <span className="text-xs text-gray-400">{t.language.comingSoon}</span>
+                )}
                 </button>
               );
             })}

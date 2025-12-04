@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import LanguageSelector from './LanguageSelector';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +60,7 @@ export default function Header() {
                     : 'text-white hover:text-primary-red'
                 }`}
               >
-                Início
+                {t.header.inicio}
               </button>
               <button 
                 onClick={() => scrollToSection('automatization')}
@@ -68,7 +70,7 @@ export default function Header() {
                     : 'text-white hover:text-primary-red'
                 }`}
               >
-                Automatizações
+                {t.header.automatizacoes}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
@@ -78,7 +80,7 @@ export default function Header() {
                     : 'text-white hover:text-primary-red'
                 }`}
               >
-                Quem Somos
+                {t.header.quemSomos}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
@@ -88,7 +90,7 @@ export default function Header() {
                     : 'text-white hover:text-primary-red'
                 }`}
               >
-                Serviços
+                {t.header.servicos}
               </button>
               <button 
                 onClick={() => scrollToSection('differential')}
@@ -98,13 +100,13 @@ export default function Header() {
                     : 'text-white hover:text-primary-red'
                 }`}
               >
-                Diferencial
+                {t.header.diferencial}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="bg-primary-red text-white px-6 py-2 rounded-lg hover:bg-secondary-blue transition-colors duration-300 font-medium"
               >
-                Contato
+                {t.header.contato}
               </button>
             </div>
             <LanguageSelector />
@@ -141,37 +143,37 @@ export default function Header() {
                 onClick={() => scrollToSection('hero')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
-                Início
+                {t.header.inicio}
               </button>
               <button 
                 onClick={() => scrollToSection('automatization')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
-                Automatizações
+                {t.header.automatizacoes}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
-                Quem Somos
+                {t.header.quemSomos}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
-                Serviços
+                {t.header.servicos}
               </button>
               <button 
                 onClick={() => scrollToSection('differential')}
                 className="block w-full text-left text-primary-blue hover:text-primary-red transition-colors duration-300 font-medium py-2"
               >
-                Diferencial
+                {t.header.diferencial}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="block w-full bg-primary-red text-white px-6 py-3 rounded-lg hover:bg-secondary-blue transition-colors duration-300 font-medium text-center"
               >
-                Contato
+                {t.header.contato}
               </button>
               <LanguageSelector isMobile={true} />
             </div>

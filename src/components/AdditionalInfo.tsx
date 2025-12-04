@@ -1,10 +1,16 @@
+'use client';
+
+import { useTranslation } from '@/hooks/useTranslation';
+
 export default function AdditionalInfo() {
+  const t = useTranslation();
+  
   return (
     <section id="additional-info" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-blue mb-6">
-            Informações Adicionais
+            {t.additionalInfo.title}
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
         </div>
@@ -14,10 +20,10 @@ export default function AdditionalInfo() {
           <div className="bg-light-gray rounded-2xl p-8 mb-12">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-primary-blue mb-4">
-                Nossa Trajetória
+                {t.additionalInfo.trajetoria.title}
               </h3>
               <p className="text-medium-gray">
-                Crescimento contínuo e evolução no mercado de São José, SC
+                {t.additionalInfo.trajetoria.description}
               </p>
             </div>
 
@@ -27,10 +33,10 @@ export default function AdditionalInfo() {
                   <span className="text-white font-bold text-xl">2012</span>
                 </div>
                 <h4 className="text-lg font-semibold text-primary-blue mb-2">
-                  Fundação
+                  {t.additionalInfo.trajetoria.fundacao.title}
                 </h4>
                 <p className="text-medium-gray text-sm">
-                  Thermo Service Climatização LTDA foi fundada em 10 de fevereiro de 2012
+                  {t.additionalInfo.trajetoria.fundacao.description}
                 </p>
               </div>
 
@@ -41,10 +47,10 @@ export default function AdditionalInfo() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-semibold text-primary-blue mb-2">
-                  Crescimento
+                  {t.additionalInfo.trajetoria.crescimento.title}
                 </h4>
                 <p className="text-medium-gray text-sm">
-                  Crescimento contínuo no mercado de São José, SC
+                  {t.additionalInfo.trajetoria.crescimento.description}
                 </p>
               </div>
 
@@ -55,10 +61,10 @@ export default function AdditionalInfo() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-semibold text-primary-blue mb-2">
-                  Expansão
+                  {t.additionalInfo.trajetoria.expansao.title}
                 </h4>
                 <p className="text-medium-gray text-sm">
-                  Atendimento a diversos setores do mercado
+                  {t.additionalInfo.trajetoria.expansao.description}
                 </p>
               </div>
             </div>
@@ -67,7 +73,7 @@ export default function AdditionalInfo() {
           {/* Clientes */}
           <div className="bg-gradient-to-br from-primary-blue to-secondary-blue rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-6 text-center">
-              Atendemos:
+              {t.additionalInfo.atendemos.title}
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -77,8 +83,8 @@ export default function AdditionalInfo() {
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                   </svg>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Clientes Finais</h4>
-                <p className="text-sm">(hotéis, hospitais, indústrias, comércios, condomínios, prédios corporativos)</p>
+                <h4 className="text-lg font-semibold mb-2">{t.additionalInfo.atendemos.clientesFinais.title}</h4>
+                <p className="text-sm">{t.additionalInfo.atendemos.clientesFinais.description}</p>
               </div>
 
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -88,15 +94,15 @@ export default function AdditionalInfo() {
                     <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
                   </svg>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Fabricantes de equipamentos e <br /> sistemas de ar-condicionado</h4>
-                <p className="text-sm">(integração, comissionamento e suporte técnico especializado)</p>
+                <h4 className="text-lg font-semibold mb-2">{t.additionalInfo.atendemos.fabricantes.title}</h4>
+                <p className="text-sm">{t.additionalInfo.atendemos.fabricantes.description}</p>
               </div>
             </div>
             
             <div className="mt-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
               <p className="text-lg leading-relaxed">
-                <strong>Foco em soluções personalizadas para cada necessidade,</strong><br />
-                com atendimento ágil e eficiente.
+                <strong>{t.additionalInfo.atendemos.foco}</strong><br />
+                {t.additionalInfo.atendemos.foco2}
               </p>
             </div>
           </div>

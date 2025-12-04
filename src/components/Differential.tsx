@@ -1,62 +1,26 @@
+'use client';
+
 import Image from 'next/image';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Differential() {
-  // const differentials = [
-  //   {
-  //     title: "Soluções Integradas",
-  //     description: "Oferecemos soluções completas que integram climatização, elétrica, hidráulica e TI em um único projeto, garantindo eficiência e economia.",
-  //     image: "/images/diferencial01.png"
-  //   },
-  //   {
-  //     title: "Experiência",
-  //     description: "Mais de 12 anos de experiência no mercado, com equipe técnica especializada e conhecimento profundo das melhores práticas da indústria.",
-  //     image: "/images/diferencial02.png"
-  //   },
-  //   {
-  //     title: "Compromisso com Qualidade",
-  //     description: "Utilizamos apenas equipamentos e materiais de alta qualidade, seguindo rigorosos padrões de instalação e manutenção para garantir a excelência.",
-  //     image: "/images/diferencial03.png"
-  //   },
-  //   {
-  //     title: "Sustentabilidade",
-  //     description: "Comprometidos com práticas sustentáveis, oferecemos soluções que reduzem o consumo energético e minimizam o impacto ambiental.",
-  //     image: "/images/diferencial04.png"
-  //   }
-  // ];
-
-    const differentials = [
-    {
-      title: "Experiência em climatização, hidráulica e elétrica",
-      image: "/images/diferencial01.png"
-    },
-    {
-      title: "Desenvolvimento de lógica personalizada",
-      image: "/images/diferencial02.png"
-    },
-    {
-      title: "Integração com diversos fabricantes e protocolos",
-      image: "/images/diferencial03.png"
-    },
-    {
-      title: "Foco em eficiência energética",
-      image: "/images/diferencial04.png"
-    },
-    {
-      title: "Suporte técnico especializado",
-      image: "/images/diferencial01.png"
-    }
-  ];
+  const t = useTranslation();
+  
+  const differentials = t.differential.items.map((title, index) => ({
+    title,
+    image: index < 4 ? `/images/diferencial0${index + 1}.png` : '/images/diferencial01.png'
+  }));
 
   return (
     <section id="differential" className="py-20 bg-light-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-blue mb-6">
-            Nosso Diferencial
+            {t.differential.title}
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-medium-gray max-w-3xl mx-auto leading-relaxed">
-            O que nos torna únicos no mercado de climatização e soluções integradas em São José, SC.
+            {t.differential.description}
           </p>
         </div>
 

@@ -1,7 +1,12 @@
+'use client';
+
 import { Instagram, Facebook, Linkedin } from 'lucide-react'
 import Image from 'next/image';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Footer() {
+  const t = useTranslation();
+  
   return (
     <footer className="bg-dark-gray text-white py-12">
       <div className="container mx-auto px-4">
@@ -17,8 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md text-sm">
-              Especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação. 
-              Fundada em 2012, com sede em São José, SC.
+              {t.footer.description}
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/thermo.servicee" className="w-10 h-10 bg-primary-red rounded-lg flex items-center justify-center hover:bg-primary-blue transition-colors duration-300">
@@ -35,18 +39,18 @@ export default function Footer() {
 
           {/* Serviços */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Serviços</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.servicos}</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">Climatização</a></li>
-              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">Instalações Elétricas</a></li>
-              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">Comércio Atacadista</a></li>
-              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">Tecnologia da Informação</a></li>
+              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">{t.footer.servicosItems.climatizacao}</a></li>
+              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">{t.footer.servicosItems.eletrica}</a></li>
+              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">{t.footer.servicosItems.atacadista}</a></li>
+              <li><a href="#services" className="hover:text-primary-red transition-colors duration-300">{t.footer.servicosItems.ti}</a></li>
             </ul>
           </div>
 
           {/* Contato */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.contato}</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-3">
                 <svg className="w-5 h-5 mt-0.5 text-primary-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -87,7 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400">
-          <p className="text-sm">&copy; 2025 Thermo Service Climatização LTDA. Todos os direitos reservados.</p>
+          <p className="text-sm">{t.footer.copyright}</p>
         </div>
       </div>
     </footer>

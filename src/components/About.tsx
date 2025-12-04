@@ -1,16 +1,21 @@
+'use client';
+
 import Image from 'next/image';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function About() {
+  const t = useTranslation();
+  
   return (
     <section id="about" className="py-20 bg-light-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-blue mb-6">
-            Quem Somos
+            {t.about.title}
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-medium-gray max-w-3xl mx-auto leading-relaxed">
-          A Thermo Service é especializada em automação predial, integrando sistemas essenciais para edifícios comerciais, industriais e residenciais com alta performance e tecnologia.
+          {t.about.description}
           </p>
         </div>
 
@@ -27,9 +32,9 @@ export default function About() {
                 />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">Missão</h3>
+            <h3 className="text-2xl font-bold text-primary-blue mb-4">{t.about.missao.title}</h3>
             <p className="text-medium-gray leading-relaxed">
-              Proporcionar conforto e eficiência por meio de soluções integradas em climatização, instalações e tecnologia.
+              {t.about.missao.description}
             </p>
           </div>
 
@@ -45,9 +50,9 @@ export default function About() {
                 />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">Visão</h3>
+            <h3 className="text-2xl font-bold text-primary-blue mb-4">{t.about.visao.title}</h3>
             <p className="text-medium-gray leading-relaxed">
-              Ser referência em serviços técnicos no Sul do Brasil.
+              {t.about.visao.description}
             </p>
           </div>
 
@@ -63,9 +68,9 @@ export default function About() {
                 />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">Valores</h3>
+            <h3 className="text-2xl font-bold text-primary-blue mb-4">{t.about.valores.title}</h3>
             <p className="text-medium-gray leading-relaxed">
-              Qualidade, Compromisso com o cliente, Inovação e Sustentabilidade
+              {t.about.valores.description}
             </p>
           </div>
         </div>
@@ -75,19 +80,19 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary-red mb-2">12+</div>
-              <div className="text-medium-gray">Anos de Experiência</div>
+              <div className="text-medium-gray">{t.about.stats.anos}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary-blue mb-2">500+</div>
-              <div className="text-medium-gray">Projetos Realizados</div>
+              <div className="text-medium-gray">{t.about.stats.projetos}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary-red mb-2">100%</div>
-              <div className="text-medium-gray">Satisfação</div>
+              <div className="text-medium-gray">{t.about.stats.satisfacao}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary-blue mb-2">24h</div>
-              <div className="text-medium-gray">Suporte Técnico</div>
+              <div className="text-medium-gray">{t.about.stats.suporte}</div>
             </div>
           </div>
         </div>

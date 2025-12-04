@@ -1,54 +1,43 @@
 'use client';
 
 import { Droplets, Wind, Lightbulb, MonitorDot } from "lucide-react";
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Automatization() {
+  const t = useTranslation();
+  
   const services = [
     {
-      title: "Bombeamento de Água",
+      title: t.automatization.bombeamento.title,
       icon: Droplets,
-      items: [
-        "Controle automático de motobombas e pressurização",
-        "Monitoramento de nível e alarmes",
-        "Eficiência e segurança operacional"
-      ]
+      items: t.automatization.bombeamento.items
     },
     {
-      title: "Ar-Condicionado",
-      subtitle: "Expansão Direta e Indireta",
+      title: t.automatization.arCondicionado.title,
+      subtitle: t.automatization.arCondicionado.subtitle,
       icon: Wind,
       systems: {
-        direta: "Expansão Direta: VRF, Splits, Rooftop",
-        indireta: "Expansão Indireta: Chillers e Centrais de Água Gelada (CAG)"
+        direta: t.automatization.arCondicionado.direta,
+        indireta: t.automatization.arCondicionado.indireta
       },
-      items: [
-        "Lógica de operação inteligente",
-        "Balanceamento de cargas",
-        "Monitoramento de desempenho",
-        "Integração com supervisório"
-      ]
+      items: t.automatization.arCondicionado.items
     },
     {
-      title: "Iluminação Inteligente",
+      title: t.automatization.iluminacao.title,
       icon: Lightbulb,
-      items: [
-        "Controle por zonas e cenários",
-        "Sensores de presença",
-        "Economia de energia",
-        "Automação de rotinas"
-      ]
+      items: t.automatization.iluminacao.items
     },
     {
-      title: "Sistemas Supervisórios",
+      title: t.automatization.supervisorio.title,
       icon: MonitorDot,
       complexities: [
         {
-          level: "Baixa complexidade",
-          description: "Monitoramento básico"
+          level: t.automatization.supervisorio.baixa.level,
+          description: t.automatization.supervisorio.baixa.description
         },
         {
-          level: "Alta complexidade",
-          description: "BMS completo com dashboards, alarmes, históricos e acesso remoto"
+          level: t.automatization.supervisorio.alta.level,
+          description: t.automatization.supervisorio.alta.description
         }
       ]
     }
@@ -59,7 +48,7 @@ export default function Automatization() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            O que Automatizamos
+            {t.automatization.title}
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
         </div>

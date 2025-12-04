@@ -19,7 +19,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Tenta detectar o idioma do navegador
-      const browserLang = navigator.language || (navigator as any).userLanguage;
+      const browserLang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || 'pt-BR';
       const langCode = browserLang.split('-')[0].toLowerCase();
       
       // Tenta detectar localização via timezone (aproximação)
@@ -58,8 +58,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Define quais idiomas estão habilitados
   const isLanguageEnabled = (lang: Language): boolean => {
-    // Por enquanto, apenas português está habilitado
-    return lang === 'pt';
+    // Todos os idiomas estão habilitados
+    return true;
   };
 
   return (

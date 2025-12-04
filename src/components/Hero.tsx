@@ -1,8 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Hero() {
+  const t = useTranslation();
+  
   return (
     <section id="hero" className="h-[70vh] md:h-[85vh] flex items-center justify-center text-white relative overflow-hidden">
       {/* Background Banner */}
@@ -24,8 +27,8 @@ export default function Hero() {
           {/* Descrição Principal */}
           <div className="mb-12 animate-fade-in-up">
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed font-medium">
-            Automação Predial Inteligente para<br />
-            <strong>Eficiência, Conforto e Confiabilidade.</strong>
+            {t.hero.title}<br />
+            <strong>{t.hero.titleBold}</strong>
             </p>
             
           </div>
@@ -36,13 +39,13 @@ export default function Hero() {
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-primary-red text-white px-8 py-4 rounded-lg hover:bg-primary-red transition-all duration-300 font-semibold text-lg hover-scale shadow-lg"
             >
-              Nossos Serviços
+              {t.hero.nossosServicos}
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-blue transition-all duration-300 font-semibold text-lg hover-scale"
             >
-              Entre em Contato
+              {t.hero.entreEmContato}
             </button>
           </div>
         </div>

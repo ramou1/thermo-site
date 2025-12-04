@@ -1,8 +1,11 @@
 "use client";
 
 import { Mail, Instagram, Phone, MapPin } from "lucide-react";
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Contact() {
+  const t = useTranslation();
+  
   return (
     <section
       id="contact"
@@ -11,13 +14,11 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Entre em Contato
+            {t.contact.title}
           </h2>
           <div className="w-24 h-1 bg-primary-red mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Estamos prontos para atender suas necessidades. Entre em contato
-            conosco e solicite um orçamento personalizado para seu projeto.
-            Atendemos São José – SC e todo o estado de Santa Catarina.
+            {t.contact.description}
           </p>
         </div>
 
@@ -25,7 +26,7 @@ export default function Contact() {
           {/* Informações de Contato e Mapa */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-6 text-center">
-              Informações de Contato
+              {t.contact.infoTitle}
             </h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -37,13 +38,13 @@ export default function Contact() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">Endereço</h4>
+                    <h4 className="font-semibold text-lg">{t.contact.endereco.title}</h4>
                     <p className="text-blue-100 leading-relaxed text-sm">
-                      Rua São Ludgero, 1006, Sala 02
+                      {t.contact.endereco.line1}
                       <br />
-                      Barreiros, São José, SC
+                      {t.contact.endereco.line2}
                       <br />
-                      CEP: 88117-270
+                      {t.contact.endereco.line3}
                     </p>
                   </div>
                 </div>
@@ -54,7 +55,7 @@ export default function Contact() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">Telefone</h4>
+                    <h4 className="font-semibold text-lg">{t.contact.telefone.title}</h4>
                     <p className="text-blue-100 text-base">
                       <a
                         href="tel:+554830357355"
@@ -72,7 +73,7 @@ export default function Contact() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">E-mail</h4>
+                    <h4 className="font-semibold text-lg">{t.contact.email.title}</h4>
                     <p className="text-blue-100 text-sm">
                       <a
                         href="mailto:thermoservice@thermoservice.srv.br"
@@ -90,7 +91,7 @@ export default function Contact() {
                     <Instagram className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">Instagram</h4>
+                    <h4 className="font-semibold text-lg">{t.contact.instagram.title}</h4>
                     <p className="text-blue-100 text-sm">
                       <a
                         href="https://www.instagram.com/thermo.servicee"
