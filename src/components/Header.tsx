@@ -109,7 +109,9 @@ export default function Header() {
                 {t.header.contato}
               </button>
             </div>
-            <LanguageSelector />
+            <div className="ml-4">
+              <LanguageSelector />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

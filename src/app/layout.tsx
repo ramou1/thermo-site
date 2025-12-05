@@ -23,6 +23,20 @@ export const metadata: Metadata = {
     description: "Especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: "/logo-thermo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Thermo Service Climatização LTDA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thermo Service Climatização LTDA",
+    description: "Especializada em soluções de climatização, elétrica, hidráulica e tecnologia da informação.",
+    images: ["/logo-thermo.jpeg"],
   },
 };
 
